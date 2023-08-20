@@ -33,6 +33,9 @@ for (const card of cards) {
         if (couponCode == 'SELL200') {
             discountFunction();
         }
+        if (couponCode != 'SELL200') {
+            document.getElementById('discounted-price').innerText = newTotalPrice.toFixed(2);
+        }
     })
 }
 
