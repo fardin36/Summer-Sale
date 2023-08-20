@@ -27,14 +27,21 @@
         .text-1 {
             color: rgba(17, 17, 17, 0.50);
         }
-    </Style>
 
+        .card:hover {
+            cursor: pointer;
+            transform: scale(1.04);
+            transition: transform 0.5s ease;
+            filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+        }
+    </Style>
+    
 </head>
 
 <body>
     <main class="bg-white text-[#111]">
         <!-- banner Section -->
-        <section class="bg-[#F9F6E2] xl:px-60">
+        <section class="bg-[#F9F6E2] md:px-8 xl:px-60">
             <div class="hero min-h-screen">
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <img src="./images/Summer 1.png" class="lg:max-w-[50%]" />
@@ -44,14 +51,17 @@
                                 class="text-[#E527B2]">20% off</span></h1>
                         <div class="flex flex-col lg:flex-row justify-center items-center gap-4 py-8 md:py-16 text-2xl">
                             <p class="font-medium">Use Promo Code</p>
-                            <button class="btn btn-secondary btn-sm font-semibold">Get Started</button>
+                            <button class="btn btn-secondary btn-md font-semibold text-2xl"
+                                id="coupon-button">SELL200</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Store Section -->
-        <section class="md:px-1 lg:px-1 xl:px-40 2xl:px-60 xl:py-20 bg-[#F8F8F8] xl:flex justify-center gap-6">
+        <section class="px-5 lg:px-10 xl:px-40 2xl:px-60 xl:py-20 bg-[#F8F8F8] xl:flex xl:justify-center gap-6">
+
             <!-- Products section  -->
             <div class="xl:w-3/4">
 
@@ -60,7 +70,7 @@
                 <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6">
 
                     <!-- card 1 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-1">
                         <div class="p-3">
                             <figure class="h-52 py-10 card-bg rounded-lg">
                                 <img src="./images/prod1.png" alt="K. Accessories" class="" />
@@ -74,13 +84,13 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-500" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-500" />
                             </div>
-                            <h2 class="card-title text-xl font-semibold">K. Accessories</h2>
-                            <p class="text-xl font-normal text-1"><span>39.00</span> TK</p>
+                            <h2 class="card-title text-xl font-semibold name">K. Accessories</h2>
+                            <p class="text-xl font-normal text-1"><span class="price">39.00</span> TK</p>
                         </div>
                     </div>
 
                     <!-- card 2 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-2">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod2.png" alt="K. Accessories" class="" />
@@ -94,13 +104,13 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-500" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-amber-500" />
                             </div>
-                            <h2 class="card-title text-xl font-semibold">K. Accessories</h2>
+                            <h2 class="card-title text-xl font-semibold name">K. Accessories</h2>
                             <p class="text-xl font-normal text-1"><span>25.00</span> TK</p>
                         </div>
                     </div>
 
                     <!-- card 3 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-3">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod3.png" alt="Home Cooker" class="" />
@@ -125,7 +135,7 @@
                 <div class="flex flex-col md:flex-row justify-start items-center gap-6">
 
                     <!-- card 4 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-4">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod4.png" alt="Sports Back Cap" class="" />
@@ -145,7 +155,7 @@
                     </div>
 
                     <!-- card 5 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-5">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod5.png" alt="Full Jersey Set" class="" />
@@ -165,7 +175,7 @@
                     </div>
 
                     <!-- card 6 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-6">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod6.png" alt="Sports cates" class="" />
@@ -190,7 +200,7 @@
                 <div class="flex flex-col md:flex-row justify-start items-center gap-6">
 
                     <!-- card 7 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-7">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod7.png" alt="Single Relax Chair" class="" />
@@ -210,7 +220,7 @@
                     </div>
 
                     <!-- card 8 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-8">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod8.png" alt="Children play" class="" />
@@ -230,7 +240,7 @@
                     </div>
 
                     <!-- card 9 -->
-                    <div class="card w-72 md:w-96 bg-white rounded-lg">
+                    <div class="card w-72 md:w-96 bg-white rounded-lg" id="card-9">
                         <div class="p-3">
                             <figure class="h-52 p-10 card-bg rounded-lg">
                                 <img src="./images/prod9.png" alt="Flexible Sofa" class="" />
@@ -252,30 +262,47 @@
             </div>
 
             <!-- cart section -->
-            <div class="xl:w-1/4">
-                <div class="bg-white rounded-lg px-2 py-3">
+            <div class="xl:w-1/4 pt-8 md:flex xl:flex-col gap-6 items-start">
+                <div class="bg-white rounded-lg px-2 py-3 xl:w-full">
                     <label for="coupon-field" class="font-medium text-2xl">Have coupon?</label>
                     <div class="flex justify-start items-center gap-0 w-full">
                         <input type="text" name="Coupon" id="coupon-field"
-                            class="bg-white text-[#111] border border-r-0 border-gray-950 rounded-l-lg h-14 font-medium text-lg pl-3 xl:w-3/5 2xl:w-auto">
+                            class="bg-white text-[#111] border border-r-0 border-gray-300 rounded-l-lg h-14 font-medium text-lg pl-3 w-4/6 ">
                         <button
-                            class="bg-[#E527B2] text-white rounded-r-lg font-semibold text-xl h-14 px-3 xl:w-2/5 2xl:w-auto">Apply</button>
+                            class="btn btn-secondary font-semibold h-14 rounded-l-none xl:text-xl w-2/6 disabled:text-black"
+                            id="coupon-apply" disabled>Apply</button>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg px-2 py-3 mt-6">
-                    <ol class="list-decimal text-xl xl:text-2xl font-medium pl-7">
+                <div class="bg-white rounded-lg px-2 py-3 xl:mt-6 xl:w-full">
+                    <ol class="list-decimal text-xl xl:text-2xl font-medium pl-9 border-b border-gray-300 py-2"
+                        id="cart-products">
                         <!-- Products will append here  -->
-                        <li>fardin khan</li>
-                        <li>fardin</li>
                     </ol>
-                    <p>
-                        <strong>Total price:</strong> <span>257.00</span> TK<br>
-                        <strong>Discount :</strong> <span>51.40</span> TK<br>
-                        <strong>Total:</strong> <span>205.60</span> TK
+                    <p class="text-xl xl:text-2xl font-medium py-2 border-b border-gray-300 mb-4">
+                        <strong>Total price:</strong> <span id="total-price">00.00</span>TK<br>
+                        <strong>Discount :</strong> <span id="discount">00.00</span>TK<br>
+                        <strong>Total:</strong> <span id="discounted-price">00.00</span>TK<br>
                     </p>
+                    <button class="btn btn-secondary btn-sm w-full font-semibold text-xl h-14 disabled:text-black"
+                        id="make-purchase" disabled onclick="my_modal_1.showModal()">Make Purchase</button>
                 </div>
             </div>
         </section>
+
+        <!-- Confirmed purchase Modal -->
+        <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box text-center bg-white">
+                <figure class="h-44 md:h-48 lg:h-52 py-10 rounded-lg">
+                    <img src="./images/congo.png" alt="" class="h-full mx-auto" />
+                </figure>
+                <h3 class="font-bold text-3xl md:text-4xl lg:text-5xl">Congratulations</h3>
+                <p class="py-2 md:py-4 font-normal text-base md:text-xl">Your Purchase the product</p>
+                <div class="modal-action">
+                    <button class="btn btn-secondary btn-sm font-semibold text-lg md:text-xl h-11 md:h-14 mx-auto">Go
+                        Home</button>
+                </div>
+            </form>
+        </dialog>
     </main>
 
     <!-- JavaScript -->
